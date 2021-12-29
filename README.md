@@ -30,7 +30,10 @@ Both CSV files had 0 missing values
 * **_Removing Duplicate Values:_**
 Duplicate values were dropped. 
 
-put code here 
+```python
+s = "Python syntax highlighting"
+print s
+```
 
 * **_Removing Outlier Values:_**
 Outlier detection using z-score method was employed and records with a z-score greater than 3 were dropped.
