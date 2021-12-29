@@ -80,13 +80,13 @@ df6
 ![](Visualizations/Density~QualityBarplot.png)
 ![](Visualizations/pH~QualityBarplot.png)
 ![](Visualizations/Sulphates~QualityBarplot.png)
-![](Visualizations/ALcohol~QualityBarplot.png)
+![](Visualizations/Alcohol~QualityBarplot.png)
 
   * Histograms & Density Plots: Both histograms and density plots were used for more in depth understanding of the distribution of values within each attribute
-  * 
+  * For further visualization for features whose correlation to target feature is unclear with histograms and barplot
+  
+  * Histograms
 ![](Visualizations/FixedAcidityHist.png)
-![](Visualizations/VolatileAcidityHist.png)
-![](Visualizations/CitricAcidHist.png)
 ![](Visualizations/ResSugarHist.png)
 ![](Visualizations/ChloridesHist.png)
 ![](Visualizations/FreeSul.DioxideHist.png)
@@ -94,10 +94,19 @@ df6
 ![](Visualizations/DensityHist.png)
 ![](Visualizations/pHHist.png)
 ![](Visualizations/SulphatesHist.png)
-![](Visualizations/ALcoholHist.png)
+
+* Density Plots
+![](Visualizations/DensityDensityPlot.png)
+![](Visualizations/FixedAcidityDensityPlot.png)
+![](Visualizations/FreeSul.DioxideDensityPlot.png)
+![](Visualizations/pHDensity.png)
+![](Visualizations/ResSugarDensityHist.png)
+![](Visualizations/SulphatesDensityPlot.png)
 
 
   * Correlation Matrix & Heatmap: Correlation matrix and heatmap were utilized to compute a pairwise comparison of columns and retreieve correlation coefficient to narrow down which features to use for model creation
+
+![](Visualizations/CorrelationHeatmap.png)
 
 * **_Feature Selection:_**
 Using Scikit-Learn's Select K Best algorithm, the top 5 most important features in relation to the target variable were returned 
