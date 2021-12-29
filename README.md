@@ -28,17 +28,37 @@ Both red and wine data was sourced from the University of California, Irvine Mac
 Both CSV files had 0 missing values
 
 * **_Removing Duplicate Values:_**
+Duplicate values were dropped. 
 
+put code here 
 
 * **_Removing Outlier Values:_**
+Outlier detection using z-score method was employed and records with a z-score greater than 3 were dropped.
 
+put code here
 
 **_Methodology:_** Feature Selection 
 
 * **_Visualization:_**
+  * Histograms 
+
+
+
+  * Barplots 
+
+
+
+
+  * Density Plots 
+
+
+
+  * Correlation Matrix & Heatmap
 
 * **_Feature Selection:_**
+Using Scikit-Learn's Select K Best algorithm, the top 5 most important features in relation to the target variable were returned. 
 
+include code here
 
 **_Methodology:_** Machine Learning  
 
