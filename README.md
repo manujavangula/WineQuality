@@ -23,3 +23,17 @@ Both red and wine data was sourced from the University of California, Irvine Mac
 
 
 **_Methodology:_** Preprocessing
+
+
+
+
+**_Methodology:_** Feature Selection 
+
+
+
+
+**_Methodology:_** Machine Learning  
+
+
+
+
