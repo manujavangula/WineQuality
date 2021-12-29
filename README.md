@@ -94,7 +94,142 @@ a.columns[selector.get_support()]
 ```
 
 **_Methodology:_** Machine Learning  
+Using top features selected from interpretation of relation between variables from data visualization and features selected from selection algorithms, models were created and the best performing model was determined
 
+* **_Models:_**
 
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2, random_state=10)
+```
+Testing 5 different ML Regression models to determine apt model
 
+Linear Regression
+```python
+lr_clf=LinearRegression(normalize=True)
+lr_clf.fit(X_train,y_train)
+y_pred=lr_clf.predict(X_test)
+y_true=y_test
+mse_lr=mean_squared_error(y_true, y_pred)
+mae_lr=mean_absolute_error(y_true, y_pred)
+r2_lr=r2_score(y_true, y_pred)
+```
 
+Ridge Regression
+```python
+clf = Ridge(alpha=1.0)
+clf.fit(X_train, y_train)
+y_pred=clf.predict(X_test)
+y_true=y_test
+mse_r=mean_squared_error(y_true, y_pred)
+mae_r=mean_absolute_error(y_true, y_pred)
+r2_r=r2_score(y_true, y_pred)
+```
+
+Lasso Regression
+```python
+las = Lasso(alpha=0.1)
+las.fit(X_train, y_train)
+y_pred=las.predict(X_test)
+y_true=y_test
+mse_l=mean_squared_error(y_true, y_pred)
+mae_l=mean_absolute_error(y_true, y_pred)
+r2_l=r2_score(y_true, y_pred)
+```
+Random Forest Regressor
+```python
+regr = RandomForestRegressor(max_depth=2, random_state=0)
+regr.fit(X_train, y_train)
+regr.score(X_test, y_test)
+y_pred=regr.predict(X_test)
+y_true=y_test
+mse_rf=mean_squared_error(y_true, y_pred)
+mae_rf=mean_absolute_error(y_true, y_pred)
+r2_rf=r2_score(y_true, y_pred)
+```
+K-Nearest Neighbors Regressor
+```python
+knn=KNeighborsRegressor(n_neighbors=20)
+knn.fit(X_train, y_train)
+knn.score(X_test, y_test)
+y_pred=knn.predict(X_test)
+y_true=y_test
+mse_knn=mean_squared_error(y_true, y_pred)
+mae_knn=mean_absolute_error(y_true, y_pred)
+r2_knn=r2_score(y_true, y_pred)
+```
+
+* **_Metrics:_**
+Dataframe with metrics such as MSE (Mean Squared Error), MAE (Mean Absolute Error), and R-squared model score
+```python
+
+data=[['Linear Regression', mse_lr,  mae_lr, r2_lr], ['Ridge', mse_r, mae_r, r2_lr], 
+     ['Lasso', mse_l,  mae_l, r2_l], ['Random Forest Regressor', mse_rf,  mae_rf, r2_rf],
+     ['K Nearest Neighbor', mse_knn, mae_knn, r2_knn]]
+metrics_df=pd.DataFrame(data, columns=['Model', 'Mean Squared Error',
+                                       'Mean Absolute Error', 'R2 Score'])
+metrics_df
+```
+maybe include picture of metrics df?
+* **_Hyperparameter Tuning:_**
+Used GridSearchCV in order to find best parameters for each model and to gain an understanding of which model outperforms the rest 
+
+```python
+
+def find_best_model_using_gridsearchcv(X,y):
+    algos={
+        'linear regression': {
+            'model': LinearRegression(),
+            'params':{
+                'normalize': [True, False]
+                
+            }
+        }, 
+        'KNN':{
+            'model': KNeighborsRegressor(),
+            'params': {
+                'n_neighbors': [3,5,11,19],
+                'weights': ['uniform', 'distance'],
+                'metric': ['euclidean', 'manhattan']
+                
+            }
+        },
+        'Ridge':{
+            'model': Ridge(),
+            'params':{
+                'alpha': [1,0.1,0.01,0.001,0.0001,0] ,
+                'fit_intercept': [True, False],
+                'solver': ['svd', 'cholesky', 'lsqr', 'sparse_cg', 'sag', 'saga']
+            }
+        }, 
+        'Lasso':{
+            'model':Lasso(), 
+            'params':{
+                'alpha': (np.logspace(-8, 8, 100))
+            }
+        },
+        'Random Forest':{
+            'model':RandomForestRegressor(), 
+            'params':{
+                'n_estimators': [200, 500],
+                'max_features': ['auto', 'sqrt', 'log2'],
+                'max_depth' : [4,5,6,7,8]
+            }
+        }
+                
+    }
+    scores=[]
+    cv=ShuffleSplit(n_splits=5, test_size=0.2, random_state=0)
+    for algo_name, config in algos.items():
+        gs=GridSearchCV(config['model'], config['params'], cv=cv, return_train_score=False)
+        gs.fit(X,y)
+        scores.append({
+            'model': algo_name, 
+            'best_score': gs.best_score_, 
+            'best_params': gs.best_params_
+        })
+    return pd.DataFrame(scores, columns=['model', 'best_score', 'best_params'])
+```
+
+* **_Results:_**
+Determined from grid search parameter tuning function that the Random Forest Regressor outperformed the other models. While the error margins are high and the model score is relatively low idk include some justification here
