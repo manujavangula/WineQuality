@@ -69,7 +69,7 @@ df6
 **_Methodology:_** Feature Selection 
 
 * **_Visualization:_**
-  * Histograms: Histograms were used in order to visualize relation between each attribute and quality rating
+  * Barplots: Barplots were used in order to visualize relation between each attribute and quality rating
 ![](Visualizations/FixedAcidity~QualityBarplot.png)
 ![](Visualizations/VolatileAcidity~QualityBarplot.png)
 ![](Visualizations/CitricAcid~QualityBarplot.png)
@@ -78,11 +78,23 @@ df6
 ![](Visualizations/FreeSul.Dioxide~QualityBarplot.png)
 ![](Visualizations/TotalSul.Dioxide~QualityBarplot.png)
 ![](Visualizations/Density~QualityBarplot.png)
-![](Visualizations/pH.Dioxide~QualityBarplot.png)
-![](Visualizations/Sulphates.Dioxide~QualityBarplot.png)
-![](Visualizations/ALcohol.Dioxide~QualityBarplot.png)
-  * Barplots & Density Plots: Both bar and density were used for more in depth understanding of the distribution of values within each attribute
+![](Visualizations/pH~QualityBarplot.png)
+![](Visualizations/Sulphates~QualityBarplot.png)
+![](Visualizations/ALcohol~QualityBarplot.png)
 
+  * Histograms & Density Plots: Both histograms and density plots were used for more in depth understanding of the distribution of values within each attribute
+  * 
+![](Visualizations/FixedAcidityHist.png)
+![](Visualizations/VolatileAcidityHist.png)
+![](Visualizations/CitricAcidHist.png)
+![](Visualizations/ResSugarHist.png)
+![](Visualizations/ChloridesHist.png)
+![](Visualizations/FreeSul.DioxideHist.png)
+![](Visualizations/TotalSul.DioxideHist.png)
+![](Visualizations/DensityHist.png)
+![](Visualizations/pHHist.png)
+![](Visualizations/SulphatesHist.png)
+![](Visualizations/ALcoholHist.png)
 
 
   * Correlation Matrix & Heatmap: Correlation matrix and heatmap were utilized to compute a pairwise comparison of columns and retreieve correlation coefficient to narrow down which features to use for model creation
