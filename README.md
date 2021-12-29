@@ -70,7 +70,7 @@ df6
 
 * **_Visualization:_**
   * Histograms: Histograms were used in order to visualize relation between each attribute and quality rating
-
+![](Visualization/
 
 
 
