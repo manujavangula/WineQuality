@@ -32,7 +32,7 @@ df3.isnull().sum()
 ```
 
 * **_Removing Duplicate Values:_**
-Duplicate values were dropped. 
+Duplicate values were dropped
 
 ```python
 df1.drop_duplicates(inplace=True)
@@ -41,7 +41,7 @@ df3 = df1.append(df2, ignore_index=True)
 ```
 
 * **_Removing Outlier Values:_**
-Outlier detection using z-score method was employed and records with a z-score greater than 3 were dropped.
+Outlier detection using z-score method was employed and records with a z-score greater than 3 were dropped
 
 ```python
 z_scores = stats.zscore(df3)
@@ -54,16 +54,11 @@ df4.shape
 **_Methodology:_** Feature Selection 
 
 * **_Visualization:_**
-  * Histograms 
+  * Histograms: Histograms were used in order to visualize relation between each attribute and quality rating
 
 
 
-  * Barplots 
-
-
-
-
-  * Density Plots 
+  * Barplots & Density Plots: Both bar and density were used to understand the distribution of values within each attribute
 
 
 
