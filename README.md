@@ -233,4 +233,4 @@ def find_best_model_using_gridsearchcv(X,y):
 ```
 
 * **_Results:_**
-Determined from grid search parameter tuning function that the Random Forest Regressor outperformed the other models. While the error margins are high and the model score is relatively low idk include some justification here
+Determined from grid search parameter tuning function that with optimally tuned parameters, the Random Forest Regressor outperformed the other models. While the error margins are high and the model score is relatively low idk include some justification here
