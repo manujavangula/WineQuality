@@ -74,7 +74,7 @@ df6
 
 
 
-  * Barplots & Density Plots: Both bar and density were used to understand the distribution of values within each attribute
+  * Barplots & Density Plots: Both bar and density were used for more in depth understanding of the distribution of values within each attribute
 
 
 
