@@ -6,7 +6,7 @@ This project centers around creating a regression ML model based on data of spec
 
 **_Methodology:_** Data
 
-Both red and wine data was sourced from the University of California, Irvine Machine Learning Repository. Attributes included from physiochemical tests
+Both red and wine data was sourced from the University of California, Irvine Machine Learning Repository. Attributes included from physiochemical tests:
 *Fixed Acidity
 *Volatile Acidity
 **- *Volatile Acidity**
