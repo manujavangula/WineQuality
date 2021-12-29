@@ -9,17 +9,17 @@ This project centers around creating a regression ML model based on data of spec
 Both red and wine data was sourced from the University of California, Irvine Machine Learning Repository. Attributes included from physiochemical tests:
 * Fixed Acidity
 * Volatile Acidity
-**- *Volatile Acidity**
-**- *Citric Acid**
-**- *Residual Sugar**
-**- *Chlorides**
-**- *Free Sulfur Dioxide**
-**- *Total Sulfur Dioxide**
-**- *Density**
-**- *pH**
-**- *Sulphates**
-**- *Alcohol**
-**- *Quality:** Score given between 0 and 10 by testers based on sensory data
+* Citric Acid 
+* Residual Sugar 
+* Chlorides
+* Free Sulfur Dioxide
+* Total Sulfur Dioxide
+* Density
+* pH
+* Sulphates
+* Alcohol
+* Quality: Score given between 0 and 10 by testers based on sensory data
+
 
 
 **_Methodology:_** Preprocessing
