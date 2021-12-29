@@ -65,9 +65,17 @@ df4.shape
   * Correlation Matrix & Heatmap
 
 * **_Feature Selection:_**
-Using Scikit-Learn's Select K Best algorithm, the top 5 most important features in relation to the target variable were returned. 
+Using Scikit-Learn's Select K Best algorithm, the top 5 most important features in relation to the target variable were returned 
 
-include code here
+
+```python
+a=df6.loc[:, df6. columns != 'quality']
+b=df6['quality']
+from sklearn.feature_selection import SelectKBest
+selector = SelectKBest(k =5)
+selector.fit(a,b)
+a.columns[selector.get_support()]
+```
 
 **_Methodology:_** Machine Learning  
 
