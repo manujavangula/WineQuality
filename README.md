@@ -51,6 +51,21 @@ df4 = pd.DataFrame(df3[filtered])
 df4.shape
 ```
 
+* **_Feature Normalization:_**
+Feature normalization using Scikit-Learn's scaler to remove mean and scale features to unit variance
+
+```python
+df5=df4
+df5_columns=list(df5.columns.values)
+from sklearn.preprocessing import StandardScaler
+scaler=StandardScaler()
+scaler.fit(df5)
+df6=scaler.transform(df5)
+df6=pd.DataFrame(df6, columns=df5_columns)
+df6
+```
+
+
 **_Methodology:_** Feature Selection 
 
 * **_Visualization:_**
