@@ -24,13 +24,13 @@ Both red and wine data was sourced from the University of California, Irvine Mac
 
 **_Methodology:_** Preprocessing
 
-**_Removing Missing (NA) Values _**
+* **_Removing Missing (NA) Values:_**
 Both CSV files had 0 missing values
 
-**_Removing Duplicate Values _**
+* **_Removing Duplicate Values:_**
 
 
-**_Removing Outlier Values _**
+* **_Removing Outlier Values:_**
 
 
 **_Methodology:_** Feature Selection 
