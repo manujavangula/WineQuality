@@ -20,3 +20,6 @@ Both red and wine data was sourced from the University of California, Irvine Mac
 **- *Sulphates**
 **- *Alcohol**
 **- *Quality:** Score given between 0 and 10 by testers based on sensory data
+
+
+**_Methodology:_** Preprocessing
