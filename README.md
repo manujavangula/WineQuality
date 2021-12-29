@@ -93,7 +93,8 @@ selector.fit(a,b)
 a.columns[selector.get_support()]
 ```
 
-**_Methodology:_** Machine Learning  
+**_Methodology:_** Machine Learning 
+
 Using top features selected from interpretation of relation between variables from data visualization and features selected from selection algorithms, models were created and the best performing model was determined
 
 * **_Models:_**
@@ -102,9 +103,9 @@ Using top features selected from interpretation of relation between variables fr
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2, random_state=10)
 ```
-Testing 5 different ML Regression models to determine apt model
+_Testing 5 different ML Regression models to determine apt model_
 
-Linear Regression
+**Linear Regression**
 ```python
 lr_clf=LinearRegression(normalize=True)
 lr_clf.fit(X_train,y_train)
@@ -115,7 +116,7 @@ mae_lr=mean_absolute_error(y_true, y_pred)
 r2_lr=r2_score(y_true, y_pred)
 ```
 
-Ridge Regression
+**Ridge Regression**
 ```python
 clf = Ridge(alpha=1.0)
 clf.fit(X_train, y_train)
@@ -126,7 +127,7 @@ mae_r=mean_absolute_error(y_true, y_pred)
 r2_r=r2_score(y_true, y_pred)
 ```
 
-Lasso Regression
+**Lasso Regression**
 ```python
 las = Lasso(alpha=0.1)
 las.fit(X_train, y_train)
@@ -136,7 +137,7 @@ mse_l=mean_squared_error(y_true, y_pred)
 mae_l=mean_absolute_error(y_true, y_pred)
 r2_l=r2_score(y_true, y_pred)
 ```
-Random Forest Regressor
+**Random Forest Regressor**
 ```python
 regr = RandomForestRegressor(max_depth=2, random_state=0)
 regr.fit(X_train, y_train)
@@ -147,7 +148,7 @@ mse_rf=mean_squared_error(y_true, y_pred)
 mae_rf=mean_absolute_error(y_true, y_pred)
 r2_rf=r2_score(y_true, y_pred)
 ```
-K-Nearest Neighbors Regressor
+**K-Nearest Neighbors Regressor**
 ```python
 knn=KNeighborsRegressor(n_neighbors=20)
 knn.fit(X_train, y_train)
@@ -160,7 +161,7 @@ r2_knn=r2_score(y_true, y_pred)
 ```
 
 * **_Metrics:_**
-Dataframe with metrics such as MSE (Mean Squared Error), MAE (Mean Absolute Error), and R-squared model score
+Dataframe with metrics such as MSE (Mean Squared Error), MAE (Mean Absolute Error), and R-squared model score. This original evaluation of metrics show the K-Nearest Neighbors Regressor to be performing the best out of the 5 models
 ```python
 
 data=[['Linear Regression', mse_lr,  mae_lr, r2_lr], ['Ridge', mse_r, mae_r, r2_lr], 
@@ -170,7 +171,7 @@ metrics_df=pd.DataFrame(data, columns=['Model', 'Mean Squared Error',
                                        'Mean Absolute Error', 'R2 Score'])
 metrics_df
 ```
-maybe include picture of metrics df?
+
 * **_Hyperparameter Tuning:_**
 Used GridSearchCV in order to find best parameters for each model and to gain an understanding of which model outperforms the rest 
 
