@@ -77,7 +77,7 @@ df6
 
 
 
-  * Correlation Matrix & Heatmap
+  * Correlation Matrix & Heatmap: Correlation matrix and heatmap were utilized to compute a pairwise comparison of columns and retreieve correlation coefficient to narrow down which features to use for model creation
 
 * **_Feature Selection:_**
 Using Scikit-Learn's Select K Best algorithm, the top 5 most important features in relation to the target variable were returned 
