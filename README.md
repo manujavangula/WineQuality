@@ -160,6 +160,7 @@ mae_knn=mean_absolute_error(y_true, y_pred)
 r2_knn=r2_score(y_true, y_pred)
 ```
 
+
 * **_Metrics:_**
 Dataframe with metrics such as MSE (Mean Squared Error), MAE (Mean Absolute Error), and R-squared model score. This original evaluation of metrics show the K-Nearest Neighbors Regressor to be performing the best out of the 5 models
 ```python
@@ -171,6 +172,7 @@ metrics_df=pd.DataFrame(data, columns=['Model', 'Mean Squared Error',
                                        'Mean Absolute Error', 'R2 Score'])
 metrics_df
 ```
+
 
 * **_Hyperparameter Tuning:_**
 Used GridSearchCV in order to find best parameters for each model and to gain an understanding of which model outperforms the rest 
@@ -232,6 +234,8 @@ def find_best_model_using_gridsearchcv(X,y):
     return pd.DataFrame(scores, columns=['model', 'best_score', 'best_params'])
 ```
 
+
+
 * **_Results:_**
 Determined from grid search parameter tuning function that with optimally tuned parameters, the Random Forest Regressor outperformed the other models and is the best choice for regression analysis for this particular data set.
 
@@ -243,11 +247,8 @@ regr.fit(X_train, y_train)
 regr.score(X_test, y_test)
 y_pred=regr.predict(X_test)
 y_true=y_test
-from sklearn.metrics import mean_squared_error
 mse_rf2=mean_squared_error(y_true, y_pred)
-from sklearn.metrics import mean_absolute_error
 mae_rf2=mean_absolute_error(y_true, y_pred)
-from sklearn.metrics import r2_score
 r2_rf2=r2_score(y_true, y_pred)
 ```
 ```python
