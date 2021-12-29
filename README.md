@@ -24,21 +24,32 @@ Both red and wine data was sourced from the University of California, Irvine Mac
 
 **_Methodology:_** Preprocessing
 
+
 * **_Removing Missing (NA) Values:_**
 Both CSV files had 0 missing values
+```python
+df3.isnull().sum()
+```
 
 * **_Removing Duplicate Values:_**
 Duplicate values were dropped. 
 
 ```python
-s = "Python syntax highlighting"
-print s
+df1.drop_duplicates(inplace=True)
+df2.drop_duplicates(inplace=True)
+df3 = df1.append(df2, ignore_index=True)
 ```
 
 * **_Removing Outlier Values:_**
 Outlier detection using z-score method was employed and records with a z-score greater than 3 were dropped.
 
-put code here
+```python
+z_scores = stats.zscore(df3)
+abs_z_scores = np.abs(z_scores)
+filtered = (abs_z_scores < 3).all(axis=1)
+df4 = pd.DataFrame(df3[filtered])
+df4.shape
+```
 
 **_Methodology:_** Feature Selection 
 
