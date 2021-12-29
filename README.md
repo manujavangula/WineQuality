@@ -233,4 +233,25 @@ def find_best_model_using_gridsearchcv(X,y):
 ```
 
 * **_Results:_**
-Determined from grid search parameter tuning function that with optimally tuned parameters, the Random Forest Regressor outperformed the other models. While the error margins are high and the model score is relatively low idk include some justification here
+Determined from grid search parameter tuning function that with optimally tuned parameters, the Random Forest Regressor outperformed the other models and is the best choice for regression analysis for this particular data set.
+
+Tuned RF Regressor
+```python
+
+regr = RandomForestRegressor(max_depth=8, max_features='log2',n_estimators=500,random_state=0)
+regr.fit(X_train, y_train)
+regr.score(X_test, y_test)
+y_pred=regr.predict(X_test)
+y_true=y_test
+from sklearn.metrics import mean_squared_error
+mse_rf2=mean_squared_error(y_true, y_pred)
+from sklearn.metrics import mean_absolute_error
+mae_rf2=mean_absolute_error(y_true, y_pred)
+from sklearn.metrics import r2_score
+r2_rf2=r2_score(y_true, y_pred)
+```
+```python
+
+y_pred=regr2.predict(X_test)
+comp_df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+```
