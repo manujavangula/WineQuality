@@ -70,11 +70,17 @@ df6
 
 * **_Visualization:_**
   * Histograms: Histograms were used in order to visualize relation between each attribute and quality rating
-![](Visualization/Alcohol~QualityBarplot.png)
-
-
-
-
+![](Visualizations/FixedAcidity~QualityBarplot.png)
+![](Visualizations/VolatileAcidity~QualityBarplot.png)
+![](Visualizations/CitricAcid~QualityBarplot.png)
+![](Visualizations/ResSugar~QualityBarplot.png)
+![](Visualizations/Chlorides~QualityBarplot.png)
+![](Visualizations/FreeSul.Dioxide~QualityBarplot.png)
+![](Visualizations/TotalSul.Dioxide~QualityBarplot.png)
+![](Visualizations/Density~QualityBarplot.png)
+![](Visualizations/pH.Dioxide~QualityBarplot.png)
+![](Visualizations/Sulphates.Dioxide~QualityBarplot.png)
+![](Visualizations/ALcohol.Dioxide~QualityBarplot.png)
   * Barplots & Density Plots: Both bar and density were used for more in depth understanding of the distribution of values within each attribute
 
 
