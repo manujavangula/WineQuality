@@ -106,7 +106,7 @@ df6
 
   * Correlation Matrix & Heatmap: Correlation matrix and heatmap were utilized to compute a pairwise comparison of columns and retreieve correlation coefficient to narrow down which features to use for model creation
 
-![](Visualizations/CorrMatrix)
+![](Visualizations/CorrMatrix.png)
 ![](Visualizations/CorrelationHeatmap.png)
 
 * **_Feature Selection:_**
