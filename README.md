@@ -82,10 +82,12 @@ df6
 ![](Visualizations/Sulphates~QualityBarplot.png)
 ![](Visualizations/Alcohol~QualityBarplot.png)
 
-  * Histograms & Density Plots: Both histograms and density plots were used for more in depth understanding of the distribution of values within each attribute
+  * **Histograms & Density Plots:** Both histograms and density plots were used for more in depth understanding of the distribution of values within each attribute
   * For further visualization for features whose correlation to target feature is unclear with histograms and barplot
   
-  * Histograms
+ * **_Histograms_**
+
+
 ![](Visualizations/FixedAcidityHist.png)
 ![](Visualizations/ResSugarHist.png)
 ![](Visualizations/ChloridesHist.png)
@@ -95,7 +97,9 @@ df6
 ![](Visualizations/pHHist.png)
 ![](Visualizations/SulphatesHist.png)
 
-* Density Plots
+ * **_Density Plots_**
+
+
 ![](Visualizations/DensityDensityPlot.png)
 ![](Visualizations/FixedAcidityDensityPlot.png)
 ![](Visualizations/FreeSul.DioxideDensityPlot.png)
@@ -104,7 +108,7 @@ df6
 ![](Visualizations/SulphatesDensityPlot.png)
 
 
-  * Correlation Matrix & Heatmap: Correlation matrix and heatmap were utilized to compute a pairwise comparison of columns and retreieve correlation coefficient to narrow down which features to use for model creation
+  * **Correlation Matrix & Heatmap**: Correlation matrix and heatmap were utilized to compute a pairwise comparison of columns and retreieve correlation coefficient to narrow down which features to use for model creation
 
 ![](Visualizations/CorrMatrix.png)
 ![](Visualizations/CorrelationHeatmap.png)
