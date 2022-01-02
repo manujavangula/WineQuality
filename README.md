@@ -98,7 +98,7 @@ df6
 ![](Visualizations/SulphatesHist.png)
 
  * **_Density Plots_**
-  * For further visualization for features whose correlation to target feature is unclear with histograms and barplot
+  * For further visualization for distribution of values for features whose correlation to target feature is unclear with histograms and barplot
 
 ![](Visualizations/DensityDensityPlot.png)
 ![](Visualizations/FixedAcidityDensityPlot.png)
