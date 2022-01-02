@@ -287,5 +287,5 @@ r2_rf2=r2_score(y_true, y_pred)
 ```python
 
 y_pred=regr2.predict(X_test)
-comp_df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+comp_df = pd.DataFrame({'Actual': y_true, 'Predicted': y_pred})
 ```
