@@ -83,7 +83,7 @@ df6
 ![](Visualizations/Alcohol~QualityBarplot.png)
 
   * **Histograms & Density Plots:** Both histograms and density plots were used for more in depth understanding of the distribution of values within each attribute
-  * For further visualization for features whose correlation to target feature is unclear with histograms and barplot
+  
   
  * **_Histograms_**
 
@@ -98,7 +98,7 @@ df6
 ![](Visualizations/SulphatesHist.png)
 
  * **_Density Plots_**
-
+  * For further visualization for features whose correlation to target feature is unclear with histograms and barplot
 
 ![](Visualizations/DensityDensityPlot.png)
 ![](Visualizations/FixedAcidityDensityPlot.png)
