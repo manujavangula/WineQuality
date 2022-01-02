@@ -69,7 +69,7 @@ df6
 **_Methodology:_** Feature Selection 
 
 * **_Visualization:_**
-  * Barplots: Barplots were used in order to visualize relation between each attribute and quality rating
+  * Barplots: Barplots were used in order to visualize relation between each attribute and quality 
 ![](Visualizations/FixedAcidity~QualityBarplot.png)
 ![](Visualizations/VolatileAcidity~QualityBarplot.png)
 ![](Visualizations/CitricAcid~QualityBarplot.png)
